@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>카링카</title>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/all.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script>
+		$(function(){
+			$("#fullpage").fullpage({
+				anchors:["a1st","a2st","a3st","a4st"],
+				menu:"#tMenu",
+				navigation: true,
+				slidesNavigation: true,
+				afterLoad:function(anchorslink,index){
+					if(index == 1){
+						$("#onViewOne").addClass("move");
+						$(".top").removeClass("view")
+					}else{
+						$("#onViewOne").removeClass("move");
+					}
+
+					if(index == 2){
+						$("#onViewTwo").addClass("move");
+						$(".top").removeClass("view")
+					}else{
+						$("#onViewTwo").removeClass("move");
+
+					}
+
+					if(index == 3){
+						$("#onViewThree").addClass("move");
+						$(".top").addClass("view")
+					}else{
+						$("#onViewThree").removeClass("move");
+					}
+					if(index == 4){
+						$("#onViewFour").addClass("move");
+						$(".top").addClass("view")
+					}else{
+						$("#onViewFour").removeClass("move");
+					}
+
+				    if(index === 1){
+				        $("#tMenu li a").addClass("w");
+				        $("#navTop li a").addClass("w");
+				    }else{
+				        $("#tMenu li a").removeClass("w");
+				        $("#navTop li a").removeClass("w");
+				    }
+
+				}
+			});
+			
+
+			$("#Toggle").click(function(){
+				var toggle = $(this).attr("class");
+				if(toggle == "toggleMenu"){
+					$(this).addClass("change");
+					$("#tMenu").stop().animate({right:0},300);
+				}
+				else{
+					$(this).removeClass("change");
+					$("#tMenu").stop().animate({right:"-300"},300);
+				}
+			});
+
+			
+
+			$(".top").click(function(){
+				$("html,body").animate({scrollTop:0},300);
+			});
+
+			
+		});
+	</script>
+</head>
+<body>
+	<header id="header">
+		<nav id="navTop" class="clearfix">
+			<h2 class="tLogo"><a href="#"><img src="images/logo.png" alt="CarLinka"></a></h2>
+			<ul id="tMenu" class="clearfix">
+				<li data-menuanchor="a1st"><a href="#a1st">카링카</a></li>
+				<li data-menuanchor="a2st"><a href="#a2st">WHY</a></li>
+				<li data-menuanchor="a3st"><a href="#a3st">WHAT</a></li>
+				<li data-menuanchor="a4st"><a href="#a4st">HOW</a></li>
+			</ul>
+			<div id="Toggle" class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</nav>
+	</header>
+	<div id="fullpage">
+		<div class="section" id="page1" data-anchor="a1st">
+			<div class="main" id="onViewOne">
+				<div class="left">
+					<h3><span>카링카</span> QR 안심 연락 서비스</h3>
+					<p class="txt1">개인정보 노출 없이 필요한 연락만 주고 받으세요</p>
+				</div>
+				<div class="right">
+					<p class="txt2">차량에 전화번호, 아직도 붙이고 계신가요?</p>
+					<p class="txt3">QR코드 하나로 <strong>번호 공개 없이</strong><br> 안전하게 연락할 수 있습니다!</p>
+					<p class="txt4">앱 다운로드</p>
+					<div class="btn_wrap">
+						<a href="" class="btn">IOS</a>
+						<a href="" class="btn">안드로이드</a>
+					</div>
+				</div>
+			</div>
+			<div class="scroll">
+				<a href="#a2st"><img src="images/btn_scroll.png" alt="scroll"></a>
+			</div>
+		</div>
+		<div class="section" id="page2" data-anchor="a2st">
+			<div class="main" id="onViewTwo">
+				<h3 class="tit"><span>왜</span> 차량 연락에도 개인정보 보호가 필요한가요?</h3>
+				<div class="con_box">
+					<div>
+						<p class="con_tit">개인정보보호</p>
+						<p class="icon1">🔒</p>
+						<p class="txt1">번호 노출 없이 필요한 순간만 연결</p>
+					</div>
+					<div>
+						<p class="con_tit">스토킹 위험 감소</p>
+						<p class="icon1">🚫</p>
+						<p class="txt1">지속적인 연락 가능성 차단</p>
+					</div>
+					<div>
+						<p class="con_tit">악성 연락 예방</p>
+						<p class="icon1">⚠️</p>
+						<p class="txt1">불필요한 접근 원천 차단</p>
+					</div>
+				</div>
+				<p class="txt2">차량에 남긴 연락처 하나로 원치 않는 상황이 발생할 수 있습니다.</p>
+				<p class="txt3">필요한 연락만 받고, 불필요한 노출은 막으세요!</p>
+			</div>
+		</div>
+		<div class="section" id="page3" data-anchor="a3st">
+			<div class="main clearfix" id="onViewThree">
+				<h3 class="tit">기존 방식과 <span>무엇</span>이 다른가요?</h3>
+				<p class="txt2">안심연락(문자) 답장 시에도 내 번호는 상대방에게 노출되지 않습니다</p>
+				<div class="con_box">
+					<div>
+						<p class="con_tit">❌기존방식❌</p>
+						<img src="images/what_img01.png" alt="기존방식">
+						<p class="txt1">
+							❌ 전화번호 그대로 노출<br>
+							❌ 문자/전화 시 개인정보 전달<br>
+							❌ 이후 지속 연락 가능
+						</p>
+					</div>
+					<div>
+						<p class="con_tit">✅카링카✅</p>
+						<img src="images/what_img02.png" alt="카링카방식">
+						<p class="txt1">
+							✅ 전화번호 완전 비공개<br>
+							✅ 메시지 중계 시스템<br>
+							✅ 필요한 경우에만 소통
+						</p>
+					</div>
+				</div>
+				<p class="txt3"><span>한 단계 더 보호</span>하는 카링카 안심서비스</p>
+			</div>
+		</div>
+		<div class="section" id="page4" data-anchor="a4st">
+			<div class="main" id="onViewFour">
+				<h3 class="tit"><span>어떻게</span> 사용하나요?</h3>
+				<div class="con_box">
+					<div>
+						<p class="con_tit">🚘차주🚘</p>
+						<div class="step">
+							<div>
+								<p class="txtbox"><span>1. QR 스캔</span>앱 설치 후 차량 등록</p>
+								<img src="images/how_img01.png" alt="1. QR 스캔: 앱 설치 후 차량 등록">
+							</div>
+							<div>
+								<p class="txtbox"><span>2. 상품 부착</span>차량 앞유리에 QR 카드 부착</p>
+								<img src="images/how_img02.png" alt="2. 상품 부착: 차량 앞유리에 QR 카드 부착">
+							</div>
+						</div>
+					</div>
+					<div>
+						<p class="con_tit">📱요청자📱</p>
+						<div class="step">
+							<div>
+								<p class="txtbox"><span>1. QR 스캔</span>앱 설없이 요청 페이지 이동</p>
+								<img src="images/how_img01.png" alt="1. QR 스캔: 앱 설없이 요청 페이지 이동">
+							</div>
+							<div>
+								<p class="txtbox"><span>2. 연락 선택</span>메시지 또는 전화</p>
+								<img src="images/how_img03.png" alt="2. 연락 선택: 메시지 또는 전화">
+								<span style="padding-top: 10px; display: block; color: #f00;">※ 전화 연결 시 요청자의 전화번호가 노출됩니다</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <p class="txt3">지금 바로 시작하세요!</p>
+				<div class="btn_wrap">
+					<a href="" class="btn">IOS</a>
+					<a href="" class="btn">안드로이드</a>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<!-- <div class="top"><a href="#a1st">TOP</a></div> -->
+	<div class="num_search">
+		<p><span>QR코드 인식이 어려우신가요?</span>차량번호로 즉시 연결해드립니다! </p>
+		<a href="https://dokkaebicall.bidpage.co.kr/requester/main?q=RAwbeVcPtrQfmMmzxzIuAPlyu-850kxcJdXQGbzO2II" target="_blank">차량번호 검색</a>
+	</div>
+</body>
+</html>
