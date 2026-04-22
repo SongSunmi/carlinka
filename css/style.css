@@ -38,10 +38,7 @@ nav#navTop h2{ position: absolute;top: 50%;transform: translateY(-50%); }
 nav#navTop h2 a{display: block;}
 nav#navTop>ul{float: right;}
 nav#navTop>ul>li{float: left;position: relative;}
-nav#navTop>ul>li>a{
-	display: block;line-height:100px;text-align: center;
-	padding: 0 50px; font-size: 20px;color:#222;transition: 0.3s;
-}
+nav#navTop>ul>li>a{ display: block;line-height:100px;text-align: center; padding: 0 50px; font-size: 20px;color:#222;transition: 0.3s; }
 nav#navTop li.active a{color: #F77F41;font-weight: 600;}
 nav#navTop li.active a.w{ color: #fff; }
 
@@ -158,9 +155,11 @@ nav#navTop li.active a.w{ color: #fff; }
 
 	nav#navTop{width: 100%;height: 100px;}
 	nav#navTop h2{ left: 30px; }
-	nav#navTop #tMenu{ height: 350px;width: 200px;padding-top: 80px; position: absolute;top: 0;right: -300px; }
-	nav#navTop>ul>li{ float: revert; padding-right: 50px; }
-	nav#navTop>ul>li>a{ display: block;line-height: 40px;text-align: right; margin: 20px 0px; font-size: 20px;transition: 0.3s; padding: 0; }
+	nav#navTop #tMenu{ height: 350px; width: 160px;padding-top: 80px; position: absolute;top: 0;right: -300px; }
+	nav#navTop>ul>li{ float: revert; padding-right: 30px; }
+	nav#navTop>ul>li>a{ display: block;line-height: 40px;text-align: right; margin: 20px 0px; font-size: 20px;transition: 0.3s; padding: 0; padding-right: 20px; background: rgba(256, 256, 256, 0.5); font-size: 18px;border-radius:20px; }
+	nav#navTop li.active a{ background: rgba(256, 256, 256, 0.8); font-size: 20px; border: 1px solid #F77F41;}
+	nav#navTop li.active a.w{ color: #F77F41; border: 1px solid #fff; }
 	
 	#navTop .toggleMenu{ width: 50px;height: 50px;_border: 1px solid #fff;cursor: pointer; position: absolute;right: 30px;top: 50%;transform: translateY(-50%); }
 	#navTop .toggleMenu div{ width: 34px;height: 3px;background-color: #000; border-radius: 3px;position: absolute;left: 7px;transition: 0.3s; }
@@ -256,10 +255,11 @@ nav#navTop li.active a.w{ color: #fff; }
 	.num_search a{ padding: 8px 15px; }
 
 	nav#navTop{ height:60px; }
-	nav#navTop #tMenu{ width: 150px; height: 250px; padding-top: 60px; }
+	nav#navTop #tMenu{ width: 120px; height: 250px; padding-top: 60px; }
 	nav#navTop h2{ left: 5%; width:100px; }
-	nav#navTop>ul>li{ padding-right: 30px; }
-	nav#navTop>ul>li>a{ line-height: 30px; margin: 10px 0; font-size: 16px; }
+	nav#navTop>ul>li{ padding-right: 20px; }
+	nav#navTop>ul>li>a{ line-height: 30px; margin: 10px 0; font-size: 16px; background: rgba(256, 256, 256, 0.5); padding-right: 10px; }
+	nav#navTop li.active a{ font-size: 18px; }
 	#navTop .toggleMenu{ width: 30px; height: 30px; right:5%; }
 	#navTop .toggleMenu div{ width:28px; height:2px; left:0; }
 	#navTop .toggleMenu .bar1{ top: 4px; }
