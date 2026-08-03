@@ -14,7 +14,7 @@ textarea,button{ font-family: Pretendard, 'Nanum Gothic', 'NanumGothic', dotum, 
 .clearfix:after{ content:"";display: block;clear: both; }
 
 
-#page1{background: #F77F41;}
+#page1{background: #759aed;}
 #page2{background: #fff;}
 #page3{background: #f4f4f4;}
 #page4{background: #fff;}
@@ -39,7 +39,7 @@ nav#navTop h2 a{display: block;}
 nav#navTop>ul{float: right;}
 nav#navTop>ul>li{float: left;position: relative;}
 nav#navTop>ul>li>a{ display: block;line-height:100px;text-align: center; padding: 0 50px; font-size: 20px;color:#222;transition: 0.3s; }
-nav#navTop li.active a{color: #F77F41;font-weight: 600;}
+nav#navTop li.active a{color: #0c54f2;font-weight: 600;}
 nav#navTop li.active a.w{ color: #fff; }
 
 .main{
@@ -92,7 +92,7 @@ nav#navTop li.active a.w{ color: #fff; }
 
 .con_tit{ font-size: 30px; font-weight: 600; margin-bottom: 20px; }
 .tit{font-size: 48px;margin-bottom: 60px;position: relative;font-weight: 600;color: #222;}
-.tit span{font-size: 60px;font-weight: 800; color: #F77F41;}
+.tit span{font-size: 60px;font-weight: 800; color: #0c54f2;}
 .txt2{ font-size: 20px; margin-bottom:20px; }
 .txt3{ font-size:30px; font-weight: 600; }
 .txt3 span{ font-weight:800; }
